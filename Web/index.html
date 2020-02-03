@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1">
+  <title>World's biggest cities</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+  <link rel="stylesheet" href="custom.css">
+  <script>
+	  var dojoConfig = {
+		// here we specify what modules/packages should be loaded
+		packages: [{
+		  name: "app",
+		  // app is a folder that we'll create to host our own modules
+		  location: "D:\\Wuhan-nCov\\Web\\app"
+		}],
+		// loading packages asynchronously assures faster loading time
+		async: true
+	  };
+	</script>
+	<!-- dojoConfig should be defined before loading the API -->
+	<script src="https://js.arcgis.com/4.8/"></script>
+</head>
+
+<body>
+  <header>
+	<div id="floating-text">
+    <h2>Wuhan-2019-nCoV evolution</h2>
+    <p><span>Wuhan-2019-nCoV</span> has infected more than 5000 people in china and spreaded to over <span>15</span> coutries around the world.This Visualization
+        aims to track the evolution of Wuhan-2019-nCoV spread since the first case. </p>
+	</div>
+  </header>
+  <div id="view"></div>
+  
+</body>
+
+<script>
+  // this loads the main module and runs the init method
+  require([
+    "app/main",
+    "dojo/domReady!"
+  ], function(app) {
+      app.init();
+    });
+</script>
+</html>
