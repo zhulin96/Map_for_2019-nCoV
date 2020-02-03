@@ -3,9 +3,9 @@ define([
   "esri/WebScene",
   "esri/views/SceneView",
   "esri/layers/FeatureLayer",
-  "esri/layers/support/LabelClass"，
+  "esri/layers/support/LabelClass",
   "esri/layers/GeoJSONLayer"
-], function (WebScene, SceneView, FeatureLayer, LabelClass) {
+], function (WebScene, SceneView, GeoJSONLayer, LabelClass) {
 
   // the module exports an object with an init method
   // init creates the web scene and the view
@@ -21,7 +21,7 @@ define([
 		}
       });
 	  const countryBoundaries = new GeoJSONLayer({
-		  url: "D:\\Wuhan-nCov\\Web\\data\\world_map.geojson",
+		  url: "https://github.com/zhulin96/Map_for_2019-nCoV/blob/master/Web/data/world_map.geojson",
 		  title: "World Countries",
 		  // we use a simple renderer when we want to symbolize all features with the same symbol
 		  renderer: {
